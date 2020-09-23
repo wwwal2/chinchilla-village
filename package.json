@@ -1,0 +1,23 @@
+{
+  "name": "chinchilla-village",
+  "version": "0.0.1",
+  "description": "super-awesome project about chinchillas village",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwwal2/chinchilla-village.git"
+  },
+  "keywords": [
+    "chinchilla",
+    "super-awesome"
+  ],
+  "author": "wwwal2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wwwal2/chinchilla-village/issues"
+  },
+  "homepage": "https://github.com/wwwal2/chinchilla-village#readme"
+}
