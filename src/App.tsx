@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-export const App: React.FC = () => {
-  return (
-    <div>
-      <h4>
-        aaffddddssddd
-      </h4>
-    </div>
-  );
-};
+const fff = 'trtr';
+
+export const App: React.FC = () => (
+  <div>
+    <h4>
+      {fff}
+    </h4>
+  </div>
+);

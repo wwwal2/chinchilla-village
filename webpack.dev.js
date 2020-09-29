@@ -1,22 +1,23 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackTemplate = require('html-webpack-template');
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
 
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
 
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
   },
 
-  devtool: "source-map",
-  
+  devtool: 'source-map',
+
   resolve: {
-    extensions: [".js", ".ts", ".jsx", ".tsx", ".json", ".less"],
+    extensions: ['.js', '.ts', '.jsx', '.tsx', '.json', '.less'],
     alias: {
-      src: path.resolve(__dirname, "src"),
+      src: path.resolve(__dirname, 'src'),
     },
   },
 
@@ -25,15 +26,15 @@ module.exports = {
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        use: "babel-loader",
+        use: 'babel-loader',
       },
       // {
       //   test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-      //   loader: "url-loader",
+      //   loader: 'url-loader',
       //   include : path.join(__dirname, 'images'),
       //   options: {
       //     limit: 10000,
-      //     name: "images/[name].[ext]",
+      //     name: 'images/[name].[ext]',
       //   },
       // },
       // {
@@ -59,11 +60,11 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      inject: "body",
-      title: "Chinchilla village",
-      template: require("html-webpack-template"),
-      bodyHtmlSnippet: "<div id=\"root\"></div>",
+      inject: 'body',
+      title: 'Chinchilla village',
+      template: HtmlWebpackTemplate,
+      bodyHtmlSnippet: '<div id=\'root\'></div>',
       favicon: './src/images/favicon.ico',
     }),
   ],
-}
+};
