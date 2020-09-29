@@ -1,11 +1,14 @@
+import { hot } from 'react-hot-loader/root';
 import React from 'react';
 
-const fff = 'trtr';
+const fff = 'Chinchilla village';
 
-export const App: React.FC = () => (
+const App: React.FC = () => (
   <div>
     <h4>
       {fff}
     </h4>
   </div>
 );
+
+export default hot(App);
