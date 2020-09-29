@@ -4,7 +4,8 @@
   "description": "super-awesome project about chinchillas village",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,27 @@
   "bugs": {
     "url": "https://github.com/wwwal2/chinchilla-village/issues"
   },
-  "homepage": "https://github.com/wwwal2/chinchilla-village#readme"
+  "homepage": "https://github.com/wwwal2/chinchilla-village#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "eslint-plugin-react": "^7.21.2",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "html-webpack-template": "^6.2.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
 }
