@@ -1,6 +1,5 @@
 {
-  "extends": ["airbnb-typescript"],
-
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
   },
@@ -9,8 +8,19 @@
     "browser": true,
     "node": true
   },
-  
+
+  "extends": [
+    "airbnb-typescript/base",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/typescript"
+  ],
+
   "rules": {
-    "import/prefer-default-export": "off"
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-var-requires": "off"
   }
 }

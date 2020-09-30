@@ -1,12 +1,12 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
 
-const fff = 'Chinchilla village';
+const text = 'Chinchilla village';
 
 const App: React.FC = () => (
   <div>
     <h4>
-      {fff}
+      {text}
     </h4>
   </div>
 );
