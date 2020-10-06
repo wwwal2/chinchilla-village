@@ -1,0 +1,12 @@
+@mixin font-face($name) {
+  @font-face {
+    font-family: $name;
+    src: url("./fonts/#{$name}.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font-face('ExpressWay-Regular');
+
+$font-family--standard: ExpressWay-Regular;

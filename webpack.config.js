@@ -63,6 +63,13 @@ module.exports = (env = {}) => {
     module: {
       rules: [
         {
+          enforce: 'pre',
+          test: /\.(ts|js)x?$/,
+          exclude: /node_modules/,
+          loader: 'eslint-loader',
+        },
+
+        {
           test: /\.(ts|js)x?$/,
           exclude: /node_modules/,
           use: 'babel-loader',
@@ -90,6 +97,15 @@ module.exports = (env = {}) => {
           loader: 'file-loader',
           options: {
             outputPath: 'images',
+            name: '[name]-[contenthash:5].[ext]',
+          },
+        },
+
+        {
+          test: /\.(ttf)$/i,
+          loader: 'file-loader',
+          options: {
+            outputPath: 'fonts',
             name: '[name]-[contenthash:5].[ext]',
           },
         },

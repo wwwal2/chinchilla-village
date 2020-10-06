@@ -1,5 +1,10 @@
-$awesome-color: #80a8a9;
+@import './globalStyles/index.scss';
 
 body {
   background-color: $awesome-color;
+  font-family: $font-family--standard;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
