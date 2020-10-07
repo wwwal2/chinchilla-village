@@ -1,7 +1,7 @@
-// @import 'src/globalStyles/index.scss';
+@import 'src/globalStyles/index.scss';
 
 .field {
   width: 400px;
   height: 400px;
-  background-color: red;
+  background-color: $awesome-color-2;
 }

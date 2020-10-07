@@ -1,13 +1,14 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
-import './App.scss';
+import styles from './App.scss';
 import chinchillas from './images/chinchillas_types.png';
 import { Field } from './components/Field';
 
 const text = 'Chinchilla types';
+const { app_wrapper } = styles;
 
 const App: React.FC = () => (
-  <div>
+  <div className={app_wrapper}>
     <h4>
       {text}
     </h4>

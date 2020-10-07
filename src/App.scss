@@ -1,10 +1,13 @@
 @import 'src/globalStyles/index.scss';
 
 body {
+  margin: 0;
   background-color: $awesome-color;
+}
+
+.app_wrapper {  
+  display: block;
+  text-align: center;
   font-family: $font-family--standard;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
