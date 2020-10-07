@@ -18,6 +18,7 @@ module.exports = (env = {}) => {
     if (isDev) entry.unshift('react-hot-loader/patch');
     return entry;
   };
+
   const getPlugins = () => {
     const plugins = [
       new HtmlWebpackPlugin({
@@ -32,7 +33,7 @@ module.exports = (env = {}) => {
       plugins.unshift(
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-          filename: 'styles.[contenthash:4].css',
+          filename: 'styles.[contenthash:5].css',
           sourceMap: true,
           ignoreOrder: false,
         }),
@@ -56,18 +57,20 @@ module.exports = (env = {}) => {
     resolve: {
       extensions: ['.js', '.ts', '.jsx', '.tsx'],
       alias: {
-        src: path.resolve(__dirname, 'src'),
+        globalStyles: path.resolve(__dirname, 'src'),
       },
     },
 
     module: {
       rules: [
-        {
-          enforce: 'pre',
-          test: /\.(ts|js)x?$/,
-          exclude: /node_modules/,
-          loader: 'eslint-loader',
-        },
+
+        // enable eslint check on project build
+        // {
+        //   enforce: 'pre',
+        //   test: /\.(ts|js)x?$/,
+        //   exclude: /node_modules/,
+        //   loader: 'eslint-loader',
+        // },
 
         {
           test: /\.(ts|js)x?$/,
@@ -84,7 +87,7 @@ module.exports = (env = {}) => {
               options: {
                 importLoaders: 1,
                 modules: {
-                  localIdentName: '[local]-[hash:base64:5]',
+                  localIdentName: '[local]-[hash:base64:4]',
                 },
               },
             },
